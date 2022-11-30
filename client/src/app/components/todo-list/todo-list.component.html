@@ -1,0 +1,33 @@
+<section>
+
+    <h1 class="text-center mt-5">Todo List Angular</h1>
+      <form class="form-group d-flex mt-5">
+        <input type="text" class="form-control"  [formControl]="todoListInput" placeholder=" Ecrivez ici..."/>
+        <button class="btn btn-success" (click)="onAdd()">Ajouter</button>
+      </form>
+  
+  <table class="table mt-5 text-center">
+      <thead>
+          <tr>
+              <th>Tâche</th>
+              <th>Modifier</th>
+              <th>Supprimer</th>
+          </tr>
+      </thead>
+      <tbody>
+           <tr *ngFor="let tache of taches">
+               <td>{{tache.tache}}</td>
+               <td>
+                  <button type="button" class="btn btn-warning" (click)="onOpenModale(tache)">Modifier</button>
+              </td>
+               <td>
+                  <button type="button" class="btn btn-danger" (click)="onDelete(tache._id)">Supprimer</button>
+              </td>
+           </tr>
+      </tbody>
+  
+  </table>
+  
+  
+  
+  </section>

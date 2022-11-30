@@ -1,0 +1,14 @@
+<section class="modale">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Modifier votre tâche :</mat-label>
+            <input matInput [formControl]="tacheInfo" type="text">
+        </mat-form-field>
+    </div>
+
+    <div class="buttons">
+        <button color="btn btn-success" (click)="onEditTodo(this)">Modifier</button>
+        <button color="btn btn-danger" (click)="onCloseModale()">Annuler</button>
+    </div>
+
+</section>
